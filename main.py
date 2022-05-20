@@ -144,22 +144,26 @@ best_student = Student('Ваня', 'Петров', 'мужской')
 best_student.courses_in_progress += ['Python']
 best_student.courses_in_progress += ['C']
 
+
 bad_student = Student('Петя', 'Иванов', 'мужской')
 bad_student.courses_in_progress += ['Python']
-bad_student.courses_in_progress += ['C']
-
-cool_mentor = Mentor('Some', 'Buddy')
-cool_mentor.courses_attached += ['Python']
+bad_student.finished_courses += ['C']
 
 cool_reviewer = Reviewer('Alex', 'Smith')
 cool_reviewer.courses_attached += ['Python']
 cool_reviewer.courses_attached += ['C']
+
+bad_reviewer = Reviewer('Ivan', 'Groznii')
+bad_reviewer.courses_attached += ['C']
+
 cool_reviewer.rate_hw(best_student, 'C', 10)
 cool_reviewer.rate_hw(best_student, 'Python', 8)
 cool_reviewer.rate_hw(best_student, 'C', 10)
 cool_reviewer.rate_hw(bad_student, 'Python', 3)
 cool_reviewer.rate_hw(bad_student, 'C', 6)
-cool_reviewer.rate_hw(bad_student, 'Python', 2)
+cool_reviewer.rate_hw(bad_student, 'Python', 6)
+bad_reviewer.rate_hw(best_student, 'C', 7)
+bad_reviewer.rate_hw(bad_student, 'C', 3)
 
 cool_lector = Lecturer('Djon', 'Bon')
 cool_lector.courses_attached += ['Python']
@@ -176,12 +180,13 @@ best_student.rate_hw(cool_lector, 'C', 10)
 best_student.rate_hw(bad_lector, 'Python', 10)
 best_student.rate_hw(bad_lector, 'Python', 3)
 best_student.rate_hw(bad_lector, 'C', 10)
+
 print(cool_reviewer)
-print()
+print(bad_reviewer)
 print(cool_lector)
-print()
 print(bad_lector)
-print()
+print(best_student)
+print(bad_student)
 print(bad_lector < cool_lector)
 print(bad_student > best_student)
 
@@ -192,5 +197,3 @@ all_lector = [cool_lector, bad_lector]
 print(reiting_students_courses(all_student))
 print()
 print(reiting_lectors_courses(all_lector))
-
-#jhgjhghgk
