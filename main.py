@@ -193,4 +193,4 @@ print(reiting_students_courses(all_student))
 print()
 print(reiting_lectors_courses(all_lector))
 
-#git remote add https://github.com/MalkovDima/ForNetology
+#jhgjhghgk
