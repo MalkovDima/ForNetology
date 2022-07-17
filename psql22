@@ -17,7 +17,8 @@ create table if not exists artist_albums (
 
 create table if not exists track (
 	id SERIAL primary key,
-	len_track integer check(len_track>0),
+	name varchar(30) not null,
+	len_track double precision check(len_track>0),
 	albums_id integer references albums(id)
 );
 
