@@ -1,0 +1,20 @@
+select name, year_create  from albums
+where year_create = 2018;
+
+select name, len_track  from track
+order by len_track desc 
+limit 1;
+
+select name from track
+where len_track >= 3.30;
+
+select "name"  from mix
+where year_create  >= 2018 and year_create  <= 2020;
+
+select name from artist 
+where name not like '% %';
+
+select name from track 
+where name ilike 'Мой%'
+or name ilike '%My%'
+;
